@@ -1,17 +1,72 @@
-# entrevista
+# 🃏 Yu-Gi-Oh Cards Flutter App
 
-A new Flutter project.
+```Prompts de GPT se encuentran en el archivo gpt.md```
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🧠 Arquitectura
 
-A few resources to get you started if this is your first Flutter project:
+```
+lib/
+├── data/
+│   ├── models/
+│   └── services/
+│
+├── domain/
+│   └── entities/
+│
+├── presentation/
+│   ├── pages/
+│   └── widgets/
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# flutter-yu-gi-oh-app
+## 📡 API utilizada
+
+Se consume una API pública de cartas de Yu-Gi-Oh que proporciona:
+
+```https://db.ygoprodeck.com/api/v7/cardinfo.php```
+
+* Nombre de la carta (`name`)
+* Tipo (`type`)
+* URL de la imagen (`image_url`)
+
+---
+
+## 🔍 Sistema de búsqueda
+
+El buscador implementa:
+
+* Filtrado local por nombre
+* Normalización a minúsculas
+* Eliminación de espacios
+* Debounce de 300 ms para evitar renders innecesarios
+
+---
+
+## 🎨 Diseño
+
+La interfaz sigue un estilo moderno enfocado en apps de entretenimiento:
+
+* Cards visuales con imagen completa
+* Gradiente inferior para legibilidad
+* Sombras suaves
+* Estética dark/gaming
+* Componentes reutilizables
+
+---
+
+## 🚀 Instalación y ejecución
+
+### 1️⃣ Clonar el repositorio
+
+```bash
+git clone https://github.com/therodycc/flutter-yu-gi-oh-app.git
+```
+
+### 2️⃣ Ejecutar la app
+
+```bash
+flutter pub get; flutter run
+```
