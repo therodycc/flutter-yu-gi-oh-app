@@ -8,16 +8,16 @@ class YugiohCardTextComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return Text(
       yugioh.name,
-      style: theme.textTheme.titleMedium?.copyWith(
-        fontWeight: FontWeight.w600,
-        height: 1.3,
-        letterSpacing: -0.2,
-      ),
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
+      style: const TextStyle(
+        color: Colors.white,
+        fontSize: 18,
+        fontWeight: FontWeight.w700,
+        height: 1.2,
+      ),
     );
   }
 }

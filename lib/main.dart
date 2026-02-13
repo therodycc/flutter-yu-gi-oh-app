@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Show Cards',
-      theme: ThemeData(colorScheme: ColorScheme.light()),
+      title: 'Yu-Gi-Oh',
+      theme: ThemeData(colorScheme: ColorScheme.dark()),
       home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
